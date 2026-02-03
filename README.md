@@ -1,4 +1,4 @@
-# 🎮 Primer juego 2D – Godot + GDScript
+# 🎮 Primer juego 2D – Godot + GDScript  "MAZMORRAS"
 
 Este repositorio muestra mi **primer juego en 2D**, desarrollado con **Godot Engine** utilizando el lenguaje de programación **GDScript**. Es un proyecto de estilo casual enfocado en el aprendizaje de mecánicas básicas de desarrollo de videojuegos.
 
