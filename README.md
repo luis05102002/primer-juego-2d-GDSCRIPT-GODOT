@@ -128,4 +128,4 @@ Cada nivel es corto, directo y sin relleno.
 
 ---
 
-🎯 **Disfruta el juego, mejora en cada intento y recuerda: menos muertes, más estilo.**
+🎯 **Disfrutad del juego.**
