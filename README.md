@@ -115,7 +115,7 @@ Cada nivel es corto, directo y sin relleno.
 * Fácil de aprender
 * Difícil de dominar
 * Castiga el descuido, no el error
-* Premia la paciencia y la observación
+
 
 ---
 
