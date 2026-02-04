@@ -127,5 +127,13 @@ Cada nivel es corto, directo y sin relleno.
 * Mantén la calma: el control preciso es la clave
 
 ---
+## CREDITOS
+
+* https://www.spriters-resource.com/
+* https://github.com/Maaack/Godot-Game-Template
+* https://orama-interactive.itch.io/pixelorama
+
+
+---
 
 🎯 **Disfrutad del juego.**
