@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://dpi6214n0auyo"]
 
+[ext_resource type="PackedScene" uid="uid://q18cexxip2j8" path="res://escenas/bordes/bordes.tscn" id="1_0jc1b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b5myx"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_jljn1"]
 
 [node name="EscenaFinal" type="Node2D" unique_id=1478829356]
@@ -10,13 +14,19 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 440.0
-offset_top = 240.0
-offset_right = 638.0
-offset_bottom = 263.0
+offset_left = -94.0
+offset_top = -15.0
+offset_right = 104.0
+offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_b5myx")
 text = "¡Felicidades! ¡Has ganado!"
 label_settings = SubResource("LabelSettings_jljn1")
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1573181935]
+
+[node name="Bordes" parent="." unique_id=472624055 instance=ExtResource("1_0jc1b")]
