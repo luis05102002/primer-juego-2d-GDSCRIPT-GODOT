@@ -56,3 +56,16 @@ func _on_area_2d_body_entered(_body: Node2D) -> void:
 	personaje_muerto.emit()
 	
 	ControladorGlobal.sumar_muerte()
+var vida := 3
+var invulnerable := false
+
+func recibir_danio(cantidad := 1):
+	if invulnerable:
+		return
+
+	vida -= cantidad
+	print("Vida del personaje:", vida)
+
+	invulnerable = true
+	await get_tree().create_timer(0.5).timeout
+	invulnerable = false

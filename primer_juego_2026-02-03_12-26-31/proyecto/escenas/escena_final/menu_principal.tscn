@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://fk7hnrcgs8ga"]
+[gd_scene format=3 uid="uid://cavcc30i8j4m3"]
 
 [ext_resource type="Theme" uid="uid://cyxbuspmwya6m" path="res://temas/boton_menu_principal.tres" id="1_1tgsf"]
 [ext_resource type="PackedScene" uid="uid://dc6cpdwni6fxq" path="res://escenas/controlador_partida/controlador_partida.tscn" id="1_w4esp"]

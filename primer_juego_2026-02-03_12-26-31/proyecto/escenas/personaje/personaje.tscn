@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bdojqunsrvdi2"]
+[gd_scene format=3 uid="uid://bdojqunsrvdi2"]
 
 [ext_resource type="SpriteFrames" uid="uid://c5mnre1cjdigx" path="res://escenas/personaje/sprite_frames_personaje.tres" id="1_jqp8e"]
 [ext_resource type="Script" uid="uid://d15goca7w2hhv" path="res://escenas/personaje/personaje.gd" id="1_yv5yb"]
@@ -10,28 +10,28 @@ size = Vector2(14, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wky4x"]
 size = Vector2(14, 16)
 
-[node name="Personaje" type="CharacterBody2D" node_paths=PackedStringArray("animacion", "area_2d")]
+[node name="Personaje" type="CharacterBody2D" unique_id=507375768 node_paths=PackedStringArray("animacion", "area_2d") groups=["personaje"]]
 collision_layer = 4
 script = ExtResource("1_yv5yb")
 animacion = NodePath("Animacion")
 area_2d = NodePath("Area2D")
 material_personaje_rojo = ExtResource("2_wky4x")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1319926959]
 visible = false
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_yv5yb")
 
-[node name="Animacion" type="AnimatedSprite2D" parent="."]
+[node name="Animacion" type="AnimatedSprite2D" parent="." unique_id=1194897082]
 texture_filter = 1
 sprite_frames = ExtResource("1_jqp8e")
 animation = &"idle"
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1601622074]
 collision_layer = 0
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=62948281]
 visible = false
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_wky4x")
