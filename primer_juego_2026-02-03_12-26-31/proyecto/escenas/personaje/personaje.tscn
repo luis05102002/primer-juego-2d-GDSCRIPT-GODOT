@@ -10,7 +10,7 @@ size = Vector2(14, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wky4x"]
 size = Vector2(14, 16)
 
-[node name="Personaje" type="CharacterBody2D" unique_id=507375768 node_paths=PackedStringArray("animacion", "area_2d") groups=["personaje"]]
+[node name="Personaje" type="CharacterBody2D" unique_id=507375768 node_paths=PackedStringArray("animacion", "area_2d") groups=["personajes"]]
 collision_layer = 4
 script = ExtResource("1_yv5yb")
 animacion = NodePath("Animacion")

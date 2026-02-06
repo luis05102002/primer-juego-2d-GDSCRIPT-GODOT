@@ -2,6 +2,27 @@
 
 [ext_resource type="Texture2D" uid="uid://dgobbp0n8qil8" path="res://03-Pig/Run (34x28).png" id="1_5dvnp"]
 [ext_resource type="Script" uid="uid://bank6sb5v8g52" path="res://escenas/enemigo/enemigo.gd" id="1_r46xo"]
+[ext_resource type="Texture2D" uid="uid://bynb4dvg0g3mt" path="res://escenas/enemigo/Attack (34x28).png" id="2_07say"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rgfv"]
+atlas = ExtResource("2_07say")
+region = Rect2(0, 0, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyvlr"]
+atlas = ExtResource("2_07say")
+region = Rect2(34, 0, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u05g5"]
+atlas = ExtResource("2_07say")
+region = Rect2(68, 0, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56ivy"]
+atlas = ExtResource("2_07say")
+region = Rect2(102, 0, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2l70"]
+atlas = ExtResource("2_07say")
+region = Rect2(136, 0, 34, 28)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r46xo"]
 atlas = ExtResource("1_5dvnp")
@@ -31,6 +52,26 @@ region = Rect2(170, 0, 34, 28)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_1rgfv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wyvlr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u05g5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_56ivy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2l70")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_r46xo")
 }, {
 "duration": 1.0,
@@ -56,14 +97,27 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1rgfv"]
 size = Vector2(27.5, 25.75)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_07say"]
+size = Vector2(33, 30)
+
 [node name="Enemigo" type="CharacterBody2D" unique_id=764555667]
+collision_layer = 2
 script = ExtResource("1_r46xo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=447562499]
 position = Vector2(0, -5)
 sprite_frames = SubResource("SpriteFrames_3d7y7")
-animation = &"run"
+animation = &"attack"
+frame_progress = 0.2741515
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=15119381]
 position = Vector2(2.25, 0.125)
 shape = SubResource("RectangleShape2D_1rgfv")
+
+[node name="attack" type="Area2D" parent="." unique_id=1856478476]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attack" unique_id=126907159]
+position = Vector2(2.5, 2)
+shape = SubResource("RectangleShape2D_07say")
+
+[connection signal="body_entered" from="attack" to="." method="_on_attack_body_entered"]

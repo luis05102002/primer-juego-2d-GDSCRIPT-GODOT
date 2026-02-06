@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dmacu6kbko37e" path="res://escenas/contenedor_monedas/contenedor_monedas.tscn" id="3_q1x2y"]
 [ext_resource type="PackedScene" uid="uid://nk8qxh5ukg7p" path="res://escenas/moneda/moneda.tscn" id="4_1npjp"]
 [ext_resource type="TileSet" uid="uid://dnahkmnbclurl" path="res://tile_sets/mazmorra.tres" id="5_uc2ro"]
+[ext_resource type="PackedScene" uid="uid://cg31m5318xv37" path="res://escenas/enemigo/enemigo.tscn" id="6_r1e6l"]
 
 [node name="Nivel2" type="Node2D" unique_id=956708032]
 
@@ -39,3 +40,9 @@ tile_set = ExtResource("5_uc2ro")
 z_index = -1
 tile_map_data = PackedByteArray("AAAEAAUAAAAAAAMAAAAFAAUAAAAAAAMAAAAAAAMAAAAAAAMAAAAKAP7/AAAAAAMAAAALAP7/AAAAAAMAAAALAP//AAAAAAMAAAD1/wEAAAAAAAMAAAD0/wIAAAAAAAMAAAD3/wIAAAAAAAMAAAD3/wMAAAAAAAMAAAD4/wEAAAAAAAMAAAD4/wIAAAAAAAMAAAD0//n/AAAAAAMAAADz//n/AAAAAAMAAADz//r/AAAAAAMAAAALAPn/AAAAAAMAAAAMAPn/AAAAAAMAAAAMAPr/AAAAAAMAAAAIAPr/AAABAAMAAAD///r/AAABAAMAAAD9/wMAAAABAAMAAAABAAMAAAACAAMAAAABAAQAAAACAAMAAAABAAUAAAACAAMAAAD9//z/AAACAAMAAAD9//3/AAACAAMAAAD8//z/AAACAAMAAAD8//3/AAACAAMAAAD8//7/AAACAAMAAAD4//z/AAACAAMAAAD4//3/AAACAAMAAAD2//z/AAACAAMAAAD2//3/AAACAAMAAAD2//7/AAACAAMAAAD7/wEAAAACAAMAAAD7/wIAAAACAAMAAAD7/wMAAAACAAMAAAALAAAAAAADAAAAAAA=")
 tile_set = ExtResource("5_uc2ro")
+
+[node name="Enemigo" parent="." unique_id=764555667 instance=ExtResource("6_r1e6l")]
+position = Vector2(19, 7)
+
+[node name="Enemigo2" parent="." unique_id=1967808598 instance=ExtResource("6_r1e6l")]
+position = Vector2(12, -79)

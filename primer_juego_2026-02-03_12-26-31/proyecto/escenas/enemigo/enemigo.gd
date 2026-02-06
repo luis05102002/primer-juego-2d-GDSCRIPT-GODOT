@@ -23,3 +23,10 @@ func _physics_process(delta):
 		
 		
 	move_and_slide()
+
+
+func _on_attack_body_entered(body):
+	if body.is_in_group("personajes"):
+		
+		$AnimatedSprite2D.play("attack")
+	pass # Replace with function body.

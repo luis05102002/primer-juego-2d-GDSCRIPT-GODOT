@@ -3,13 +3,11 @@ extends Node2D
 @export var niveles: Array[PackedScene]
 @export var controlador_partida: ControladorPartida
 
-# 🔹 ESTE es el último nivel del juego
-@export var ultimo_nivel := 2
-
 var _nivel_actual: int = 1
 var _nivel_instanciado: Node
 
 
+# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if ControladorGlobal.nivel > 1:
 		_cargar_nivel()
@@ -46,11 +44,11 @@ func _reiniciar_nivel_deferred():
 
 
 # =========================
-# CAMBIO DE NIVEL
+# CAMBIO IMPORTANTE AQUÍ
 # =========================
 func siguiente_nivel():
-	# 🔥 Si estamos en el último nivel → escena final
-	if _nivel_actual == ultimo_nivel:
+	# Último nivel → escena final
+	if _nivel_actual == niveles.size():
 		ControladorGlobal.nivel = 1
 		call_deferred("_ir_a_escena_final")
 		return
