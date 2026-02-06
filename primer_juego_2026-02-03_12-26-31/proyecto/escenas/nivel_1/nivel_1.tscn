@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bdojqunsrvdi2" path="res://escenas/personaje/personaje.tscn" id="3_wpukg"]
 [ext_resource type="PackedScene" uid="uid://nk8qxh5ukg7p" path="res://escenas/moneda/moneda.tscn" id="4_dn0x7"]
 [ext_resource type="PackedScene" uid="uid://dmacu6kbko37e" path="res://escenas/contenedor_monedas/contenedor_monedas.tscn" id="4_tifen"]
+[ext_resource type="PackedScene" uid="uid://cg31m5318xv37" path="res://escenas/enemigo/enemigo.tscn" id="7_5mjar"]
 
 [node name="Nivel1" type="Node2D" unique_id=882127938]
 
@@ -42,3 +43,9 @@ position = Vector2(73, 97)
 
 [node name="Personaje" parent="." unique_id=1875084676 instance=ExtResource("3_wpukg")]
 position = Vector2(28, -32)
+
+[node name="Enemigo" parent="." unique_id=764555667 instance=ExtResource("7_5mjar")]
+position = Vector2(-21, -62)
+
+[node name="Enemigo2" parent="." unique_id=2132751690 instance=ExtResource("7_5mjar")]
+position = Vector2(-104, 71)

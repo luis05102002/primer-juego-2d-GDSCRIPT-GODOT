@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://cg31m5318xv37"]
+
+[ext_resource type="Texture2D" uid="uid://dgobbp0n8qil8" path="res://03-Pig/Run (34x28).png" id="1_5dvnp"]
+[ext_resource type="Script" uid="uid://bank6sb5v8g52" path="res://escenas/enemigo/enemigo.gd" id="1_r46xo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r46xo"]
+atlas = ExtResource("1_5dvnp")
+region = Rect2(0, 0, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07say"]
+atlas = ExtResource("1_5dvnp")
+region = Rect2(34, 0, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wc1l2"]
+atlas = ExtResource("1_5dvnp")
+region = Rect2(68, 0, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ia6sk"]
+atlas = ExtResource("1_5dvnp")
+region = Rect2(102, 0, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5fpx"]
+atlas = ExtResource("1_5dvnp")
+region = Rect2(136, 0, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtyug"]
+atlas = ExtResource("1_5dvnp")
+region = Rect2(170, 0, 34, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3d7y7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r46xo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_07say")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wc1l2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ia6sk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s5fpx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtyug")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1rgfv"]
+size = Vector2(27.5, 25.75)
+
+[node name="Enemigo" type="CharacterBody2D" unique_id=764555667]
+script = ExtResource("1_r46xo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=447562499]
+position = Vector2(0, -5)
+sprite_frames = SubResource("SpriteFrames_3d7y7")
+animation = &"run"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=15119381]
+position = Vector2(2.25, 0.125)
+shape = SubResource("RectangleShape2D_1rgfv")
