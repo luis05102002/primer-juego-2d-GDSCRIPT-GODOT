@@ -4,6 +4,8 @@
 Este repositorio muestra mi **primer juego en 2D**, desarrollado con **Godot Engine** utilizando el lenguaje de programación **GDScript**.  
 Es un proyecto de estilo casual enfocado en el aprendizaje de las mecánicas fundamentales del desarrollo de videojuegos 2D.
 
+Itch.io: https://luisgomez05102002.itch.io/
+
 ---
 
 # 📘 Guía Avanzada del Juego (2D Casual)
@@ -125,3 +127,6 @@ El personaje cambia de animación según su estado:
 ---
 
 🎯 **Disfrutad del juego.**
+
+ 
+
